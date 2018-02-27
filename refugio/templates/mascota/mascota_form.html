@@ -1,0 +1,10 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<form method="post">
+	{% csrf_token %} <!--En todos los formularios django se debe escribir este token de seguridad-->
+	{{ form.as_p }} <!--Aquí se indica que se va a pintar el formulario como párrafo, es decir, dentro de puras etiquetas p-->
+
+	<button type="submit">Registrar</button>
+</form>
+{% endblock %}
